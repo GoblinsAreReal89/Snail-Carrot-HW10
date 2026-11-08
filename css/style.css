@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #ad585800;
+    background: #a9feff;
     border: 60px solid transparent;
     border-image: (assets/framingAsset.png) 25% round;
 }
