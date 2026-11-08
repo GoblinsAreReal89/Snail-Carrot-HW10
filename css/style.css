@@ -11,6 +11,6 @@ body {
     min-height: 100vh;
     background: #f0f0f0;
     border: 60px solid transparent;
-    border-image: 'framingAsset.png';
+    border-image: url(framingAsset.png) 25% round;
 }
 
