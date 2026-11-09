@@ -6,9 +6,13 @@ async function setup() {
     createCanvas(800, 600);
     textSize(55)
     textAlign(CENTER,CENTER)
+    
 }
 
+timeVar = 0
+
 function draw() {
+    timeVar = timeVar + 1
     rectMode(CENTER);
     //image(snailRef,0,0,800,600); //im using this to guide my shapes, it shouldn't show up in the final
     background(70,120,220,225);
@@ -19,16 +23,29 @@ function draw() {
 
 325, 100
 
-let HeartCenterX = 375
-let HeartCenterY = 100
-
 //heart shape
 stroke(0,0)
 fill(227, 78, 113)
-bezier(HeartCenterX, HeartCenterY, HeartCenterX + 60,HeartCenterY - 30 ,HeartCenterX + 160,HeartCenterY,HeartCenterX,HeartCenterY + 170)
-bezier(HeartCenterX, HeartCenterY, HeartCenterX - 60,HeartCenterY - 30 ,HeartCenterX - 160,HeartCenterY,HeartCenterX,HeartCenterY + 170)
+bezier(mouseX, mouseY, mouseX + 60,mouseY - 30 ,mouseX + 160,mouseY,mouseX,mouseY + 170)
+bezier(mouseX, mouseY, mouseX - 60,mouseY - 30 ,mouseX - 160,mouseY,mouseX,mouseY + 170)
+stroke(227,78,113)
+line(mouseX,mouseY,mouseX,mouseY+170)
+stroke(0,0)
 
+//flying bird
+if (timeVar > 420) 
+{
+timeVar = -100
+}
+fill(20,20,80,225)
+arc(150 + timeVar * 2, 50, 50, 50, 3, 6, CENTER)
+fill(70,120,220,255)
+circle(150 + timeVar * 2,50,25)
 
+fill(20,20,80,225)
+arc(190 + timeVar * 2, 50, 50, 50, 3.5, 6, CENTER)
+fill(70,120,220,255)
+circle(190 + timeVar * 2,50,25)
 
 
 
